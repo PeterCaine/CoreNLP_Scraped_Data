@@ -86,7 +86,7 @@ def data_in_fives(file):
             print(n, 'texts')
             pass
 
-        all_data = zip(who, when, ratings, final_flights, titles, texts)
+        all_data = zip(who, when, ratings, flights, titles, texts)
         all_data_in_fives.append(all_data)
     return all_data_in_fives
 

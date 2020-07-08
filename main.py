@@ -13,8 +13,6 @@ or "s" for select companies: '
             page_input = 10
         else:
             page_input = int(page_input)
-
-        
     else:
         prompt = 'enter url of airline you wish to scrape: '
         main_url = input(prompt)
@@ -32,7 +30,6 @@ or "s" for select companies: '
     prompt = "if scrape has crashed, change parameter (start) to page number where crash happened to restart from\
 that point otherwise enter 0): "
     start = input(prompt)
-    
     if main_input.lower() == 'i':
         urls = get_links_to_scrape(main_url, start=start_input, num_pages=page_input)
     else:
@@ -45,7 +42,6 @@ that point otherwise enter 0): "
         driver.quit()
         
 if __name__ == "__main__":
-    
     if platform.system() == "Linux" or platform.system() == "Linux2" or platform.system() == "Darwin":
         prompt = "Enter path to geckodriver (default is current working directory): "
         path_input = input(prompt)
