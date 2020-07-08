@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Trip-Advisor_Scrape
 Scraping Trip Advisor using Python and Selenium
 
@@ -30,4 +31,7 @@ At the beginning of the programme you are prompted to:
     - text of review. 
 - a txt file of the companies scraped is also output to the airline_pickles folder.
 - large files (i.e. large numbers of scraped reviews) take a while to write out. Patience is required.
-
+=======
+# CoreNLP_Scraped_Data
+Using Stanford's CoreNLP, 'stanza', module to process scraped data.
+>>>>>>> 24250f4f141a0543ab4643488239726c9ffccc66

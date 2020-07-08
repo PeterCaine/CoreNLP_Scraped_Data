@@ -6,9 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+selenium = "*"
+bs4 = "*"
 tqdm = "*"
-pandas = "*"
-stanza = "*"
 
 [requires]
 python_version = "3.8"
