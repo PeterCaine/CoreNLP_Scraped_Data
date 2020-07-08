@@ -15,8 +15,7 @@ def data_in_fives(file):
         line = str(line)
         soup = BeautifulSoup(line, 'lxml')
 
-        who_when_list = soup.find_all(
-            'div', {'class': 'social-member-event-MemberEventOnObjectBlock__event_type--3njyv'}, limit=5)
+        who_when_list = soup.find_all('div', {'class':"_2fxQ4TOx"}, limit=5)
         who = []
         when = []
         try:
@@ -40,24 +39,35 @@ def data_in_fives(file):
             print(n, 'ratings')
             pass
 
-        flight_list = soup.find_all(
-            'div', {'class': 'location-review-review-list-parts-RatingLine__labelBtn--e58BL'})
+
+
+        flight_type_list = soup.find_all('div',{'class': 'hpZJCN7D'})
+        
+        for flight_type in flight_type_list:
+            soup = BeautifulSoup(str(flight_type), 'lxml')
+            three_elements = soup.find_all('div',{'class': '_3tp-5a1G'})
+            for element in three_elements:
+                flight = three_elements[0].text
+                flight_type = three_elements[1].text
+                seat_type = three_elements[2].text
+            print (flight, '\t', flight_type, '\t', seat_type)
+
+
+
+
+        flight_list = soup.find_all(  'div', {'class': 'hpZJCN7D'})
         flights = []
         try:
-            for flight in flight_list:
-                flights.append(flight.text)
-            # split into 3s
-            separated_flights = zip(*[iter(flights)]*3)
-            final_flights = []
-            for flight in separated_flights:
-                concat_flights = ', '.join(flight)
-                final_flights.append(concat_flights)
+            for flight_type in flight_type_list:
+                soup = BeautifulSoup(str(flight_type), 'lxml')
+                three_elements = soup.find_all('div',{'class': '_3tp-5a1G'})
+                flight = [element.text for element in three_elements]
+                flights.append(', '.join(flight))
         except:
             print(n, 'flights')
             pass
 
-        title_list = soup.find_all(
-            'div', {'class': 'location-review-review-list-parts-ReviewTitle__reviewTitle--2GO9Z'})
+        title_list = soup.find_all('div',{'data-test-target': 'review-title'})
         titles = []
         try:
             for title in title_list:
@@ -66,8 +76,7 @@ def data_in_fives(file):
             print(n, 'titles')
             pass
 
-        text_list = soup.find_all(
-            'q', {'class': 'location-review-review-list-parts-ExpandableReview__reviewText--gOmRC'})
+        text_list = soup.find_all('q',{'IRsGHoPm'})
         try:
             texts = []
 
