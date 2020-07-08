@@ -127,6 +127,22 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 
 #folders
 airline_dataframe_dumps/
+=======
+<<<<<<< HEAD
+
+
+#selenium
+geckodriver
+geckodriver.log
+
+# folders to ignore
+airline_pickles/
+airline_dataframe_dumps/
+=======
+>>>>>>> 24250f4f141a0543ab4643488239726c9ffccc66
+ 
+>>>>>>> 62885ced74319511417669076f19a127f51898ea
