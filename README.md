@@ -30,8 +30,4 @@ At the beginning of the programme you are prompted to:
     - text of review. 
 - a txt file of the companies scraped is also output to the airline_pickles folder.
 - large files (i.e. large numbers of scraped reviews) take a while to write out. Patience is required.
-=======
-# CoreNLP_Scraped_Data
-Using Stanford's CoreNLP, 'stanza', module to process scraped data.
-Data has been scraped from TripAdvisor (see https://github.com/PeterCaine/Trip-Advisor_Scrape) in groups of 5 reviews.
 
