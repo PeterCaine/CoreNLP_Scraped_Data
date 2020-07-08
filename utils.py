@@ -77,4 +77,4 @@ def trip_advisor_scrape(driver, url, start=0, num_reviews=1500):
     print('finished at review number: ', n+1)
     
     sys.setrecursionlimit(10000)
-    pickle.dump(soup_list, open(f'./airline_pickles/{basename}_{start}-{start + n}.pkl', 'wb'))
+    pickle.dump(soup_list, open(f'./airline_pickles/{basename}_{start}-{start + n}.pkl', 'wb')) 

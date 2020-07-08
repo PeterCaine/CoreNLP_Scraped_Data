@@ -57,4 +57,4 @@ if __name__ == "__main__":
         os.environ["PATH"] += os.pathsep + path
     if not os.path.exists('./airline_pickles'):
         os.mkdir('airline_pickles')
-    main()
+    main() 
